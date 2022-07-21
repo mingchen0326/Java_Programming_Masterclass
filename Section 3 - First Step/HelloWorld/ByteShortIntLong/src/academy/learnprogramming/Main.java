@@ -30,5 +30,18 @@ public class Main {
         System.out.println("Long Maximum Value = " + myMaxLongValue);
         long bigLongLiteralValue = 2_147_483_647_234L;
         System.out.println(bigLongLiteralValue);
+
+        // Video 27. Casting in Java
+        int myTotal = (myMinIntValue / 2);
+        byte myNewByteValue = (byte) (myMinByteValue / 2);
+        short myNewShortValue = (short) (myMinShortValue / 2);
+
+        // Video 28. Primitive Types Challenge
+        byte secondByte = (byte) 250;
+        short secondShort = (short) 2500;
+        int secondInt = 25000;
+        long secondLong = 50000L + 10L * (secondByte + secondShort + secondInt);
+        System.out.println(secondLong);
+
     }
 }
