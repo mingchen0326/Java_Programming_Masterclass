@@ -32,15 +32,20 @@ public class Main {
             System.out.println("Your final score was " + finalScore);
         }
 
-        int secondScore = 10000;
-        levelCompleted = 8;
-        bonus = 200;
+        int secondScore = calculateScore(true, 800, 8, 200);
+
+
+
+    }
+    // Video 48. Method In Java
+    public static int calculateScore(boolean gameOver, int secondScore, int levelCompleted, int bonus) {
 
         if (gameOver) {
             int finalScore = secondScore + (levelCompleted * bonus);
             System.out.println(("You second final score was " + finalScore));
+            return finalScore;
+        } else {
+            return -1;
         }
-
-
     }
 }
