@@ -52,5 +52,32 @@ public class Main {
         System.out.println("year is " + isLeap9);
         System.out.println("year is " + isLeap10);
         System.out.println("year is " + isLeap11);
+
+        // the following code test DecimalComparator
+        System.out.println("The answer is: " + DecimalComparator.areEqualByThreeDecimalPlaces(-3.1756, -3.175));
+        System.out.println("The answer is: " + DecimalComparator.areEqualByThreeDecimalPlaces(3.175, 3.176));
+        System.out.println("The answer is: " + DecimalComparator.areEqualByThreeDecimalPlaces(3.0, 3.0));
+        System.out.println("The answer is: " + DecimalComparator.areEqualByThreeDecimalPlaces(-3.123, 3.123));
+
+        // the following code test EqualSumChecker
+        System.out.println("The hasEqualSum method test answer is: " + EqualSumChecker.hasEqualSum(1, 1, 1));
+        System.out.println("The hasEqualSum method test answer is: " + EqualSumChecker.hasEqualSum(1, 1, 2));
+        System.out.println("The hasEqualSum method test answer is: " + EqualSumChecker.hasEqualSum(1, -1, 0));
+
+        // the following code test TeenNumberChecker
+        System.out.println("The hasTeen method test answer is: " + TeenNumberChecker.hasTeen(9, 99, 19));
+        System.out.println("The hasTeen method test answer is: " + TeenNumberChecker.hasTeen(23, 15, 42));
+        System.out.println("The hasTeen method test answer is: " + TeenNumberChecker.hasTeen(22, 23, 24));
+
+        // the following code test SecondsAndMinute
+        System.out.println("Time Conversion result is " + SecondsAndMinutesChallenge.getDurationString(120, 0));
+        System.out.println("Time Conversion result is " + SecondsAndMinutesChallenge.getDurationString(-60, 0));
+        System.out.println("Time Conversion result is " + SecondsAndMinutesChallenge.getDurationString(90, 30));
+
+        System.out.println("Time Conversion result is " + SecondsAndMinutesChallenge.getDurationString(7200));
+        System.out.println("Time Conversion result is " + SecondsAndMinutesChallenge.getDurationString(-3600));
+        System.out.println("Time Conversion result is " + SecondsAndMinutesChallenge.getDurationString(5430));
+
+
     }
 }
