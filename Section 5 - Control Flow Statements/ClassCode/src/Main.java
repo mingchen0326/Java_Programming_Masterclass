@@ -76,6 +76,22 @@ public class Main {
 //        }
 //        System.out.println("number " + n + " has " + count + " prime numbers" );
 
+        int count = 0;
+        while (count != 5) {
+            System.out.printf("Count value is %d\n", count);
+            count++;
+        }
+
+        while (true) {
+            if (count == 6) {
+                break;
+            }
+            System.out.println("Count value is " + count);
+            count++;
+        }
+
+        boolean isEven = isEvenNumber(4);
+        System.out.println("is Even is " + isEven);
     }
 
     public static double calculateInterest(double amount, double interestRate) {
@@ -94,5 +110,12 @@ public class Main {
         }
 
         return true;
+    }
+
+    public static boolean isEvenNumber (int num) {
+        if (num % 2 == 0) {
+            return true;
+        }
+        return false;
     }
 }
