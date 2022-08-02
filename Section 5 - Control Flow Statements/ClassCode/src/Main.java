@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         // ----------------------------------------------Video 63. The Switch Statement-------------------------------------------
@@ -76,22 +78,51 @@ public class Main {
 //        }
 //        System.out.println("number " + n + " has " + count + " prime numbers" );
 
-        int count = 0;
-        while (count != 5) {
-            System.out.printf("Count value is %d\n", count);
-            count++;
-        }
+//        int count = 0;
+//        while (count != 5) {
+//            System.out.printf("Count value is %d\n", count);
+//            count++;
+//        }
+//
+//        while (true) {
+//            if (count == 6) {
+//                break;
+//            }
+//            System.out.println("Count value is " + count);
+//            count++;
+//        }
+//
+//        boolean isEven = isEvenNumber(4);
+//        System.out.println("is Even is " + isEven);
+        // ----------------------------------------------Video 71. String to Number-------------------------------------------
+        String numberAsString = "2018";
+        int number = Integer.parseInt(numberAsString);
 
-        while (true) {
-            if (count == 6) {
-                break;
+        // ----------------------------------------------Video 72. Reading User Input-------------------------------------------
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your year of birth: ");
+
+        boolean hasNextInt = scanner.hasNextInt();
+
+        if (hasNextInt) {
+            int yearOfBirth = scanner.nextInt();
+            scanner.nextLine();  // handle next line character
+
+            System.out.println("Enter you name: ");
+            String name = scanner.nextLine();
+            int age = 2018 - yearOfBirth;
+
+            if (age >= 0 && age <= 100) {
+                System.out.println("You name is " + name + ", and you are " + age + " years old.");
+            } else {
+                System.out.println("Invalid year of birth");
             }
-            System.out.println("Count value is " + count);
-            count++;
+        } else {
+            System.out.println("Unable to parse year of birth.");
         }
 
-        boolean isEven = isEvenNumber(4);
-        System.out.println("is Even is " + isEven);
+        scanner.close();
     }
 
     public static double calculateInterest(double amount, double interestRate) {
