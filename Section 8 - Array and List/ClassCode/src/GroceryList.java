@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Video105 {
+public class GroceryList {
     private ArrayList<String> groceryList = new ArrayList<String>();
-    private static Scanner scanner = new Scanner(System.in);
+
 
     public void addGroceryItem(String item) {
         groceryList.add(item);
