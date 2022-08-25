@@ -8,6 +8,7 @@ public class Branch {
 
     public Branch(String nameOfBranch) {
         this.name = nameOfBranch;
+        this.customers = new ArrayList<Customer>();
     }
 
     public String getName() {
@@ -39,7 +40,7 @@ public class Branch {
 
     public Customer findCustomer(String customerName) {
         for (int i=0; i<customers.size(); i++) {
-            if (customers.get(i).getName() == customerName) {
+            if (customers.get(i).getName().equals(customerName)) {
                 return customers.get(i);
             }
         }

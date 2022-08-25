@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class Bank {
     private String name;
-    ArrayList<Branch> branches;
+    private ArrayList<Branch> branches;
 
     public Bank(String nameOfBank) {
         this.name = nameOfBank;
+        this.branches = new ArrayList<Branch>();
     }
 
     public boolean addBranch(String nameOfBranch) {
@@ -38,26 +39,28 @@ public class Bank {
         }
     }
 
-    public Branch findBranch(String nameOfBranch) {
-        for (int i=0; i<branches.size(); i++) {
-            if (branches.get(i).getName() == nameOfBranch) {
-                return branches.get(i);
+    private Branch findBranch(String nameOfBranch) {
+        for (int i=0; i<this.branches.size(); i++) {
+            if (this.branches.get(i).getName().equals(nameOfBranch)) {
+                return this.branches.get(i);
             }
         }
         return null;
     }
 
-    public boolean listCustomer(String nameOfBranch, boolean printTransaction) {
+    public boolean listCustomers(String nameOfBranch, boolean printTransaction) {
         if (this.findBranch(nameOfBranch) == null) {
             return false;
         } else {
             Branch branch = this.findBranch(nameOfBranch);
             for (int i=0; i<branch.getCustomers().size(); i++) {
                 Customer customer = branch.getCustomers().get(i);
-                System.out.println(i + ". " + customer.getName());
+                System.out.println("Customer details for branch " + nameOfBranch);
+                System.out.println("Cusotmer: " + customer.getName() +"[" + (i+1) + "]");
+                System.out.println("Transactions");
                 if (printTransaction) {
                     for (int j=0; j<customer.getTransactions().size(); j++) {
-                        System.out.println("Transaction " + j + ". " + customer.getTransactions().get(j));
+                        System.out.println("[" + (j+1) + "] " + "Amount" + " " + customer.getTransactions().get(j));
                     }
                 }
             }
