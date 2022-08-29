@@ -1,3 +1,5 @@
+package Interface;
+
 public class MobilePhone implements ITelephone{
     private int myNumber;
     private boolean isRinging;
